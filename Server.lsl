@@ -13,11 +13,14 @@ default
   on_rez(){
     llMessageLinked(LINK_SET,num,"ping clients",NULL_KEY);
   }
-  email(string time, string address, string subj, string message, integer num_left){
-    if(subj == )
-  }
-  link_message(integer link, integer chan, string msg, key id){
-    if(chan == request_chan){
+    email(string time, string address, string subj, string message, integer num_left){
+    string decrypt = llXorBase64StringsCorrect ( llGetKey(), time)
+    if(subj != decrypt){
+      
+    }
+}
+link_message(integer link, integer chan, string msg, key id){
+  if(chan == request_chan){
       llInventory
     }
   }
